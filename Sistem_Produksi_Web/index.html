@@ -146,6 +146,20 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Menu Produk</h2>
       </div><!-- End Section Title -->
+      <div id="data-produk"></div>
+
+<div id="hasil-php"></div>
+
+<script>
+fetch("phpyo.php")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("hasil-php").innerHTML = data;
+  });
+</script>
+
+
+
 
       <div class="container">
         <center>
