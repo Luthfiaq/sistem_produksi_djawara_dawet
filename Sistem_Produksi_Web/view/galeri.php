@@ -160,7 +160,7 @@ $base_url = '../';
         <h3>Galeri Produk</h3>
         <div class="gallery">
             <div class="card">
-                <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/proses produksi.jpg" alt="Djawara Dawet">
+                <img src="<?= $base_url ?>asset/my-profile-img.jpg" alt="Djawara Dawet">
                 <div class="card-body">
                 </div>
             </div>
@@ -172,7 +172,7 @@ $base_url = '../';
             </div>
 
             <div class="card">
-                <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/8.jpg" alt="Hasil Produk">
+                <img src="<?= $base_url ?>asset/img/hero-bg.jpg" alt="Hasil Produk">
                 <div class="card-body">
                 </div>
             </div>
