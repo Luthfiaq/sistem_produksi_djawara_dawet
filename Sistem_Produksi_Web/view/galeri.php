@@ -25,7 +25,7 @@ $base_url = '../';
             left: 0;
             width: 230px;
             height: 100%;
-            background: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+            background: linear-gradient(180deg, #151516ff 10%, #0d0d0eff 100%);
             color: white;
             display: flex;
             flex-direction: column;
@@ -66,7 +66,7 @@ $base_url = '../';
         }
 
         h3 {
-            color: #2e59d9;
+            color: #101011ff;
             font-weight: 600;
             margin-bottom: 30px;
             text-align: center;
@@ -160,23 +160,20 @@ $base_url = '../';
         <h3>Galeri Produk</h3>
         <div class="gallery">
             <div class="card">
-                <img src="<?= $base_url ?>img/produk1.jpg" alt="Produk 1">
+                <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/proses produksi.jpg" alt="Djawara Dawet">
                 <div class="card-body">
-                    <p>Djawara Dawet</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="<?= $base_url ?>img/produk2.jpg" alt="Produk 2">
+                <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/proses produksi.jpg" alt="Proses Membuat Produk">
                 <div class="card-body">
-                    <p>Proses Membuat Produk</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="<?= $base_url ?>img/produk3.jpg" alt="Produk 3">
+                <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/8.jpg" alt="Hasil Produk">
                 <div class="card-body">
-                    <p>Hasil Produk</p>
                 </div>
             </div>
         </div>
