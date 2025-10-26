@@ -20,6 +20,7 @@ $result = $conn->query($sql);
         <th>Jumlah Produksi</th>
         <th>Nama Produk</th>
         <th>Keterangan</th>
+        <th>Foto produk</th>
     </tr>
 
     <?php if ($result->num_rows > 0): ?>
@@ -31,6 +32,7 @@ $result = $conn->query($sql);
                 <td><?= $row['jumlah_produksi']; ?></td>
                 <td><?= $row['nama_produk']; ?></td>
                 <td><?= $row['keterangan']; ?></td>
+                <td><?= $row['gambar']; ?></td>
             </tr>
         <?php endwhile; ?>
     <?php else: ?>
@@ -40,3 +42,4 @@ $result = $conn->query($sql);
 </table>
 
 <?php $conn->close(); ?>
+
