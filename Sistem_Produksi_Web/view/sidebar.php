@@ -88,7 +88,7 @@ $base_url = '../';
 <div class="sidebar">
     <!-- Profile / Brand -->
     <div class="profile">
-        <img src="<?= $base_url ?>assets/img/logo_djawara_dawet.png" alt="Logo Djawara Dawet">
+        <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png" alt="Logo Djawara Dawet">
         <h3>Djawara Dawet</h3>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f" style="color:white; margin:0 5px;"></i></a>
