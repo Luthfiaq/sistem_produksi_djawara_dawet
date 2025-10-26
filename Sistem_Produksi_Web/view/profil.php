@@ -137,7 +137,7 @@ $base_url = '../';
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <img src="<?= $base_url ?>assets/logo.png" alt="Logo Djawara Dawet">
+        <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png" alt="Logo Djawara Dawet">
         <h2>Djawara Dawet</h2>
         <a href="<?= $base_url ?>index.php">Home</a>
         <a href="<?= $base_url ?>view/profil.php">Profil</a>
