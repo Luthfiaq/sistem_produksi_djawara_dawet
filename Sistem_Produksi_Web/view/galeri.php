@@ -166,7 +166,7 @@ $base_url = '../';
             </div>
 
             <div class="card">
-                <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/proses produksi.jpg" alt="Proses Membuat Produk">
+                <img src="<?= $base_url ?>asset/img/Proses.jpeg" alt="Proses Membuat Produk">
                 <div class="card-body">
                 </div>
             </div>
