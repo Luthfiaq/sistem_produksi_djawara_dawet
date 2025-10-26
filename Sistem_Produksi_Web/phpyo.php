@@ -15,23 +15,17 @@ $result = $conn->query($sql);
 <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align:center;">
     <tr style="background-color:#f2f2f2;">
         <th>ID Produk</th>
-        <th>ID Data Produk</th>
-        <th>Tanggal Produksi</th>
-        <th>Jumlah Produksi</th>
-        <th>Nama Produk</th>
-        <th>Keterangan</th>
-        <th>Foto produk</th>
+        <th>Nama produk</th>
+        <th>Harga</th>
+        <th>Gambar</th>
     </tr>
 
     <?php if ($result->num_rows > 0): ?>
         <?php while($row = $result->fetch_assoc()): ?>
             <tr>
                 <td><?= $row['id_produk']; ?></td>
-                <td><?= $row['id_data_produk']; ?></td>
-                <td><?= $row['tanggal_produksi']; ?></td>
-                <td><?= $row['jumlah_produksi']; ?></td>
                 <td><?= $row['nama_produk']; ?></td>
-                <td><?= $row['keterangan']; ?></td>
+                <td><?= $row['harga']; ?></td>
                 <td><?= $row['gambar']; ?></td>
             </tr>
         <?php endwhile; ?>
@@ -42,4 +36,5 @@ $result = $conn->query($sql);
 </table>
 
 <?php $conn->close(); ?>
+
 
