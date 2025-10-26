@@ -108,7 +108,7 @@ $base_url = '../';
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <img src="<?= $base_url ?>img/logo_djawara.png" alt="Logo Djawara Dawet">
+        <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png/8.jpg" alt="Logo Djawara Dawet">
         <h4>Djawara Dawet</h4>
         <div class="social-icons mb-3">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -131,4 +131,3 @@ $base_url = '../';
     </div>
 </body>
 </html>
-
