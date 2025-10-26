@@ -8,33 +8,35 @@ if ($conn->connect_error) {
 }
 
 // Ambil data dari tabel data_produk
-$sql = "SELECT * FROM data_produk";
+$sql = "SELECT * FROM produk";
 $result = $conn->query($sql);
 ?>
 
 <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align:center;">
     <tr style="background-color:#f2f2f2;">
+        <th>No</th>
         <th>ID Produk</th>
         <th>Nama produk</th>
         <th>Harga</th>
         <th>Gambar</th>
     </tr>
 
-    <?php if ($result->num_rows > 0): ?>
-        <?php while($row = $result->fetch_assoc()): ?>
-            <tr>
-                <td><?= $row['id_produk']; ?></td>
-                <td><?= $row['nama_produk']; ?></td>
-                <td><?= $row['harga']; ?></td>
-                <td><?= $row['gambar']; ?></td>
-            </tr>
-        <?php endwhile; ?>
-    <?php else: ?>
-        <tr><td colspan="6">Tidak ada data</td></tr>
-    <?php endif; ?>
+   
+   <?php $i = 1; ?>
+<?php if ($result->num_rows > 0): ?>
+    <?php while($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td><?= $i++; ?></td>
+            <td><?= $row['id_produk']; ?></td>
+            <td><?= $row['nama_produk']; ?></td>
+            <td><?= $row['harga']; ?></td>
+            <td><img src="gambar/<?= $row["gambar"]; ?>" alt="" height="100" width="100" srcset=""></td>
+        </tr>
+    <?php endwhile; ?>
+<?php endif; ?>
+
 
 </table>
 
 <?php $conn->close(); ?>
-
 
