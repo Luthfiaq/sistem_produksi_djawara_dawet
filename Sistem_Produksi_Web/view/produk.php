@@ -17,7 +17,7 @@
                     <th>Keterangan</th>
                 </tr>
             </thead>
-            <tbody>
+            <body>
                 <tr>
                     <td>1010</td>
                     <td>Dawet Original</td>
