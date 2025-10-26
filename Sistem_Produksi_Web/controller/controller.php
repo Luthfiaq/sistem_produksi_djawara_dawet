@@ -7,6 +7,7 @@ class produkcontroller {
         
         $stokproduk = $produkModel->getAllStokproduk();
        
-        require __DIR__ . '/../views/stok.php';
+        require __DIR__ . '/../view/produk.php';
     }
 }
+
