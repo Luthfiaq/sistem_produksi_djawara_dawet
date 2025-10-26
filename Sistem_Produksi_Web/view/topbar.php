@@ -123,7 +123,7 @@ $base_url = './';
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <img src="<?= $base_url ?>img/logo_djawara.png" alt="Logo Djawara Dawet">
+        <img src="<?= $base_url ?>assetimglogo_djawara_dawet.png" alt="Logo Djawara Dawet">
         <h4>Djawara Dawet</h4>
 
         <div class="social-icons mb-3">
