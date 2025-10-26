@@ -41,7 +41,7 @@
                     <td>Dawet Durian</td>
                     <td>Rp.15.000</td>
                     <td>Tersedia</td>
-            </tbody>
+            </body>
         </table>
     </div>
 </body>
