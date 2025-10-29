@@ -16,7 +16,7 @@ if (isset($_POST['simpan'])) {
     $harga  = $_POST['harga'];
     $status = $_POST['status_produk'];
     mysqli_query($conn, "INSERT INTO produk (nama_produk, harga, status_produk) VALUES ('$nama','$harga','$status')");
-    header("Location: tambah_berhasil.html");
+    header("Location: tambah berhasil.html");
 }
 
 // ==== Ubah Data ====
@@ -26,14 +26,14 @@ if (isset($_POST['ubah'])) {
     $harga  = $_POST['harga'];
     $status = $_POST['status_produk'];
     mysqli_query($conn, "UPDATE produk SET nama_produk='$nama', harga='$harga', status_produk='$status' WHERE id_produk=$id");
-    header("Location: ubah_berhasil.html");
+    header("Location: ubah berhasil.html");
 }
 
 // ==== Hapus Data ====
 if (isset($_GET['hapus'])) {
     $id = $_GET['hapus'];
     mysqli_query($conn, "DELETE FROM produk WHERE id_produk=$id");
-    header("Location: hapus_berhasil.html");
+    header("Location: hapus berhasil.html");
 }
 
 // ==== Ambil data jika ubah ====
@@ -73,7 +73,6 @@ if (isset($_GET['edit'])) {
         color: #333;
     }
     form {
-        margin-top: 20px;
         margin-bottom: 20px;
     }
     input, select {
@@ -101,7 +100,6 @@ if (isset($_GET['edit'])) {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
-        margin-bottom: 30px;
     }
     th, td {
         border-bottom: 1px solid #e5e7eb;
@@ -133,6 +131,30 @@ if (isset($_GET['edit'])) {
 <body>
 
 <div class="container">
+    <h2><?= $editMode ? 'Ubah Data Produk' : 'Tambah Data Produk'; ?></h2>
+
+    <form method="POST" action="">
+        <?php if ($editMode): ?>
+            <input type="hidden" name="id_produk" value="<?= $dataEdit['id_produk']; ?>">
+        <?php endif; ?>
+
+        <label>Nama Produk:</label>
+        <input type="text" name="nama_produk" value="<?= $editMode ? $dataEdit['nama_produk'] : ''; ?>" required>
+
+        <label>Harga:</label>
+        <input type="number" name="harga" value="<?= $editMode ? $dataEdit['harga'] : ''; ?>" required>
+
+        <label>Status Produk:</label>
+        <select name="status_produk" required>
+            <option value="Tersedia" <?= $editMode && $dataEdit['status_produk']=='Tersedia' ? 'selected' : ''; ?>>Tersedia</option>
+            <option value="Habis" <?= $editMode && $dataEdit['status_produk']=='Habis' ? 'selected' : ''; ?>>Habis</option>
+        </select>
+
+        <button type="submit" name="<?= $editMode ? 'ubah' : 'simpan'; ?>">
+            <?= $editMode ? 'Ubah Data' : 'Tambah Data'; ?>
+        </button>
+    </form>
+
     <h2>Daftar Produk</h2>
     <table>
         <tr>
@@ -158,30 +180,6 @@ if (isset($_GET['edit'])) {
         }
         ?>
     </table>
-
-    <h2><?= $editMode ? 'Ubah Data Produk' : 'Tambah Data Produk'; ?></h2>
-
-    <form method="POST" action="">
-        <?php if ($editMode): ?>
-            <input type="hidden" name="id_produk" value="<?= $dataEdit['id_produk']; ?>">
-        <?php endif; ?>
-
-        <label>Nama Produk:</label>
-        <input type="text" name="nama_produk" value="<?= $editMode ? $dataEdit['nama_produk'] : ''; ?>" required>
-
-        <label>Harga:</label>
-        <input type="number" name="harga" value="<?= $editMode ? $dataEdit['harga'] : ''; ?>" required>
-
-        <label>Status Produk:</label>
-        <select name="status_produk" required>
-            <option value="Tersedia" <?= $editMode && $dataEdit['status_produk']=='Tersedia' ? 'selected' : ''; ?>>Tersedia</option>
-            <option value="Habis" <?= $editMode && $dataEdit['status_produk']=='Habis' ? 'selected' : ''; ?>>Habis</option>
-        </select>
-
-        <button type="submit" name="<?= $editMode ? 'ubah' : 'simpan'; ?>">
-            <?= $editMode ? 'Ubah Data' : 'Tambah Data'; ?>
-        </button>
-    </form>
 </div>
 
 </body>
