@@ -139,29 +139,33 @@
 
     </section><!-- /Stats Section -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+<!-- Produk Section -->
+<section id="resume" class="resume section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Menu Produk</h2>
+  </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Menu Produk</h2>
-      </div><!-- End Section Title -->
-      <div id="data-produk"></div>
-
-<div id="hasil-php"></div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <iframe
+      src="crud/index.php"
+      width="100%"
+      height="1000"
+      style="border:none; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+      title="Manajemen Produk"
+      id="produk-frame"
+    ></iframe>
+  </div>
+</section>
 
 <script>
-fetch("crud/crude.php")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("hasil-php").innerHTML = data;
+  // Biar tinggi iframe menyesuaikan isi secara otomatis (opsional)
+  window.addEventListener("message", function (event) {
+    if (event.data.type === "resize") {
+      document.getElementById("produk-frame").style.height = event.data.height + "px";
+    }
   });
 </script>
 
-
-
-
-      
 
     </section><!-- /Portfolio Section -->
 
