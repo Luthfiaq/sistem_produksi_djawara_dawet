@@ -1,0 +1,199 @@
+<?php require "config.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Bahan Baku</title>
+
+    <!-- Custom fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+    <!-- Datatables -->
+    <link
+      href="vendor/datatables/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-text mx-3">Djawara Dawet</div>
+        </a>
+
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <hr class="sidebar-divider" />
+
+        <div class="sidebar-heading">Interface</div>
+
+        <!-- Menu -->
+        <li class="nav-item">
+          <a class="nav-link" href="bahan_baku.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Bahan Baku</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="data_produk.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Data Produksi</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="produk.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Produk</span>
+          </a>
+        </li>
+
+        <hr class="sidebar-divider d-none d-md-block" />
+
+        <!-- Sidebar Toggler -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow"
+          >
+            <!-- Sidebar Toggle -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- User Info -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                >
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                    >Admin</span
+                  >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="img/undraw_profile.svg"
+                  />
+                </a>
+
+                <div
+                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                >
+                  <div class="dropdown-divider"></div>
+
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End Topbar -->
+
+          <!-- Page Content -->
+          <div class="container-fluid">
+            <iframe
+              src="crud_bahan_baku/index.php"
+              width="100%"
+              height="650"
+              style="
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              "
+              title="Manajemen Bahan Baku"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Logout Modal -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal">
+                  ×
+                </button>
+              </div>
+              <div class="modal-body">Select "Logout" to end your session.</div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">
+                  Cancel
+                </button>
+                <a class="btn btn-primary" href="logout.php">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+  </body>
+</html>
