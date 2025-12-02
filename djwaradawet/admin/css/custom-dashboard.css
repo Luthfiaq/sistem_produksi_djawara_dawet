@@ -1,0 +1,58 @@
+/* Custom dashboard styling to modernize appearance */
+:root{
+  --card-bg:#ffffff;
+  --card-border:#e6e9ef;
+  --accent:#4e73df;
+  --muted:#6c757d;
+}
+
+/* Improve cards */
+.card.custom-card{
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(46,61,73,0.08);
+  border:1px solid var(--card-border);
+  overflow:hidden;
+}
+.card.custom-card .card-body{
+  padding:1.25rem 1.5rem;
+}
+
+/* Statistic tiles */
+.stat-tile{
+  padding:18px 20px;
+  border-radius:10px;
+  color:#fff;
+}
+.stat-tile .value{ font-size:1.5rem; font-weight:700; display:block; }
+.stat-tile .label{ font-size:0.9rem; opacity:0.95; }
+
+/* Stat grid */
+.stat-grid{ display:flex; gap:1rem; margin-bottom:1.25rem; }
+.stat-card{ border-radius:12px; padding:0.75rem; display:flex; align-items:center; gap:0.8rem; box-shadow:0 6px 18px rgba(46,61,73,0.05); border:1px solid var(--card-border); background:var(--card-bg); }
+.stat-icon{ width:56px; height:56px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; }
+.stat-content .stat-label{ font-size:0.85rem; color:var(--muted); }
+.stat-content .stat-value{ font-size:1.4rem; font-weight:700; color:#222; }
+
+/* color helpers */
+.bg-stat-primary{ background: var(--accent); }
+.bg-stat-warning{ background: #f6c23e; }
+.bg-stat-success{ background: #1cc88a; }
+.bg-stat-info{ background: #36b9cc; }
+.bg-stat-danger{ background: #e74a3b; }
+.bg-stat-secondary{ background: #6c757d; }
+
+/* Chart containers */
+.chart-card{ min-height:220px; display:flex; align-items:center; }
+.chart-card canvas{ width:100% !important; height:220px !important; }
+
+/* Improve datatable look */
+.dataTables_wrapper .dataTables_paginate .paginate_button{ padding:6px 10px; border-radius:6px; }
+#datatablesSimple thead th{ background:transparent; color:#495057; }
+
+/* Sidebar tweak */
+.sidebar.bg-gradient-primary{ background: linear-gradient(180deg,#3b6df2 0%, #2b59d6 100%) !important; }
+
+/* Responsive tweaks */
+@media (max-width: 992px){
+  .chart-card canvas{ height:200px !important; }
+}
